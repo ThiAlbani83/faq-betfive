@@ -13,8 +13,7 @@ const AccordionItem = ({ title, icon, content, isOpen, onClick, links }) => {
                 <div className='w-full flex gap-2 md:gap-10'>
                     <h3 className={isOpen ? 'text-betpink text-lg lg:text-[20px] max-w-fit' : 'text-white text-lg lg:text-[20px] max-w-fit'}>{title}</h3>
                     <div className='flex items-center justify-center'>
-                        {isOpen ? <LuChevronUp className='text-white bg-betpink rounded-full w-[24px] h-[24px]' /> : <LuChevronDown className='text-white bg-betpink rounded-full w-[24px] h-[24px]' />}
-                        
+                       <LuChevronDown className={`text-white bg-betpink rounded-full w-[24px] h-[24px] ${isOpen ? 'rotate-180 duration-1000' : 'rotate-0 duration-1000'}`} />
                     </div>
                 </div>
 
