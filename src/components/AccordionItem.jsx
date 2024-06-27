@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import { LuChevronDown } from "react-icons/lu";
+import { LuChevronDown, LuChevronUp } from "react-icons/lu";
 
 
 const AccordionItem = ({ title, icon, content, isOpen, onClick, links }) => {
@@ -13,7 +13,8 @@ const AccordionItem = ({ title, icon, content, isOpen, onClick, links }) => {
                 <div className='w-full flex gap-2 md:gap-10'>
                     <h3 className={isOpen ? 'text-betpink text-lg lg:text-[20px] max-w-fit' : 'text-white text-lg lg:text-[20px] max-w-fit'}>{title}</h3>
                     <div className='flex items-center justify-center'>
-                        <LuChevronDown className='text-white bg-betpink rounded-full w-[24px] h-[24px]' />
+                        {isOpen ? <LuChevronUp className='text-white bg-betpink rounded-full w-[24px] h-[24px]' /> : <LuChevronDown className='text-white bg-betpink rounded-full w-[24px] h-[24px]' />}
+                        
                     </div>
                 </div>
 
