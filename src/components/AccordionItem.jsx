@@ -16,7 +16,6 @@ const AccordionItem = ({ title, icon, content, isOpen, onClick, links }) => {
                        <LuChevronDown className={`text-white bg-betpink rounded-full w-[24px] h-[24px] ${isOpen ? 'rotate-180 duration-1000' : 'rotate-0 duration-1000'}`} />
                     </div>
                 </div>
-
             </div>
             <motion.div
                 className="overflow-hidden p-[15px]"
