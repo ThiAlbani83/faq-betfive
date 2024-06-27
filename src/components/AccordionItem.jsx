@@ -1,13 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import { LuChevronDown } from "react-icons/lu";
+
 
 const AccordionItem = ({ title, icon, content, isOpen, onClick, links }) => {
     return (
         <div className="">
-            <div className="flex items-center gap-2 p-[15px] lg:px-[40px] lg:py-[20px] cursor-pointer" onClick={onClick}>
+            <div className="flex items-center gap-2 md:gap-6 p-[15px] lg:px-[40px] lg:py-[20px] cursor-pointer" onClick={onClick}>
                 <span className='text-5xl md:text-6xl text-betpink stroke-current font-poppins font-bold'>{icon}</span>
-                <h3 className={isOpen ? 'text-betpink text-lg lg:text-[20px]' : 'text-white text-lg lg:text-[20px]'}>{title}</h3>
+
+                <div className='w-full flex gap-2 md:gap-10'>
+                    <h3 className={isOpen ? 'text-betpink text-lg lg:text-[20px] max-w-fit' : 'text-white text-lg lg:text-[20px] max-w-fit'}>{title}</h3>
+                    <div className='flex items-center justify-center'>
+                        <LuChevronDown className='text-white bg-betpink rounded-full w-[24px] h-[24px]' />
+                    </div>
+                </div>
+
             </div>
             <motion.div
                 className="overflow-hidden p-[15px]"
